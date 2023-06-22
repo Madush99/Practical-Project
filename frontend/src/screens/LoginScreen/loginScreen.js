@@ -16,13 +16,10 @@ const LoginScreen = () => {
       const { loading, error, userInfo } = userLogin
       const navigate = useNavigate();
 
-
-
       useEffect(() => {
             if (userInfo) {
                   navigate("/report");
             }
-
       }, [userInfo])
 
       const submitHandler = (e) => {

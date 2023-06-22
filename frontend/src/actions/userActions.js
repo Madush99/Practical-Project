@@ -13,11 +13,12 @@ export const login = (username, password) => async (dispatch) => {
                 },
           }
           const { data } = await axios.post('http://148.251.225.118:3200/api/login', { username, password }, config)
-
+       
           dispatch({
                 type: USER_LOGIN_SUCCESS,
                 payload: data
           })
+          console.log(data)
 
           localStorage.setItem('userInfo', JSON.stringify(data))
 
