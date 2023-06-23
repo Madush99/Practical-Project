@@ -22,6 +22,7 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import NavBar from '../../components/Nav';
+import Divider from '@mui/material/Divider';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
     [`&.${tableCellClasses.head}`]: {
@@ -84,10 +85,10 @@ const ReportScreen = () => {
     return (
         <>
             <div>
-                <NavBar/>
+                <NavBar />
                 <center>
                     <div>
-            
+                        <br></br>
                         <h1>Transactions List </h1>
 
                         <TableContainer style={{ height: 500, width: 1000 }} component={Paper}>
@@ -153,6 +154,8 @@ const ReportScreen = () => {
                         </TableContainer>
 
                     </div>
+                    <br></br>
+                    <Divider/>
                     <br></br>
                     <h1>All Transactions Summary </h1>
                     <Card sx={{ maxWidth: 600 }}>

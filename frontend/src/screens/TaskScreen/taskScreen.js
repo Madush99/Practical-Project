@@ -6,7 +6,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-const TaskScreen = ({ tasks, onDelete, onEdit }) => {
+const TaskScreen = ({ tasks, onDelete, onEdit, completeTask }) => {
     return (
         <>
         <center>
@@ -26,13 +26,17 @@ const TaskScreen = ({ tasks, onDelete, onEdit }) => {
                                 <Typography variant="body2" color="text.secondary">
                                     Task Description: {task.description}
                                 </Typography>
-                                <Typography variant="body2" color="text.secondary">
-                                    Task Due Date: {task.day}
+                                <Typography variant="body2" color="text.secondary" >
+                                    Task Due Date: {task.date}
+                                </Typography>
+                                <Typography variant="body2" color="text.secondary" >
+                                    Task Complete Status: {task.compTsk}
                                 </Typography>
                             </CardContent>
                             <CardActions>
                                 <Button size="small" onClick={() => onDelete(task.id)}><FaTimes className="delIcon" /> Delete</Button>
                                 <Button size="small" onClick={() => onEdit(task.id)}><FaPencilAlt className="editIcon" /> Update</Button>
+                                <Button size="small" onClick={() => completeTask(task.id)}><FaPencilAlt className="editIcon" /> Change Status</Button>
                             </CardActions>
                         </Card>
                         <br></br>

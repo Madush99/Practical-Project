@@ -1,6 +1,7 @@
 import axios from "axios"
 import { REPORT_LIST_FAIL, REPORT_LIST_REQUEST, REPORT_LIST_SUCCESS, SUMMARY_FAIL, SUMMARY_REQUEST, SUMMARY_SUCCESS } from "../constants/reportConstants"
 
+//All tarnasaction details
 export const tranactionDetails = () => async (dispatch) => {
     try {
           dispatch({
@@ -34,7 +35,7 @@ export const tranactionDetails = () => async (dispatch) => {
     }
 }
 
-
+//transaction summery
 export const detailsSummary = () => async (dispatch) => {
     try {
           dispatch({
