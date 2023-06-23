@@ -48,7 +48,7 @@ const LoginScreen = () => {
                                                                   <p class="text-muted mb-4">Login using your user credentials.</p>
                                                                   <form onSubmit={submitHandler} >
                                                                         <div class="form-group mb-3">
-                                                                              <input id="inputEmail" type="text" placeholder="Email address" required="" autofocus="" value={username} onChange={(e) => setUsername(e.target.value)} class="form-control rounded-pill border-0 shadow-sm px-4" />
+                                                                              <input id="inputEmail" type="text" placeholder="Username" required="" autofocus="" value={username} onChange={(e) => setUsername(e.target.value)} class="form-control rounded-pill border-0 shadow-sm px-4" />
                                                                         </div>
                                                                         <div class="form-group mb-3">
                                                                               <input id="inputPassword" type="password" placeholder="Password" required="" value={password} onChange={(e) => setPassword(e.target.value)} class="form-control rounded-pill border-0 shadow-sm px-4 text-primary" />
